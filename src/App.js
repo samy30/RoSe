@@ -2,6 +2,7 @@ import React from 'react';
 import "./App.css"
 import {Landing,Leasure} from "./screens"
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import Background from "./assets/images/zcX57qE6i.jpg";
 
 function App() {
   return (
