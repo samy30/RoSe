@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/langue.css">
+	<link rel="stylesheet" href="css/ripple.css">
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  	
+	<title>Page Scroll Effects | CodyHouse</title>
+	<style>
+		div.text {
+			font-size: 48px;
+			width: 50px;
+			height:50px;
+			position: absolute;
+			z-index: 9999999999999;
+		}
+		.col-6{
+			line-height: 50vh;
+		}
+
+		.col-2{
+			padding-bottom: 15px;
+		}
+
+		.col-6 button{
+			font-size: 500%;
+			width: 30vh;
+    		height: 30vh;
+			border-radius: 50%;
+		}
+
+		.col-2 button{
+			font-size: 200%;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+		}
+		#music label{
+			font-size: 20px;
+		}
+		#music .list-music .row{
+			margin-bottom: 10px;
+		}
+
+		.bd-example, .carousel, .carousel-inner, .carousel-item{
+			width: 100%;
+			height: 100%;
+		}
+
+		.sub-title{
+			padding: 50px 0 50px;
+			background: rgba(218, 223, 225, 0.8);
+			width: 100%;
+    		top: 0px;
+			position: absolute;
+			font-size: 40px;
+		}
+
+		.btn-primary, .btn-danger{
+			background-color: #e67e22 !important;
+			border: none;
+		}
+		.row h3{
+			line-height: 20vh;
+			font-size: 48px;
+			color: white;
+		}
+	</style>
+</head>
+
+<body data-hijacking="on" data-animation="scaleDown">
+
+	<section class="cd-section visible" id="splash_screen">
+		<span class="blur"></span>
+		<div>
+			<h2 class="text-white" style="font-weight: 900">Welcome to RoSe (Robot Service)</h2>
+		</div>
+	</section>
+
+	<section class="cd-section" id="all_lang">
+		<span class="blur"></span>
+		<div>
+			<h2 class="text-white">
+				<button class="btn btn-primary" id="select_lang">Select Language</button>
+			</h2>
+			<div class='a text text-white'>Salut</div>
+			<div class='b text text-white'>Hola</div>
+			<div class='c text text-white'>Привет</div>
+			<div class='d text text-white'>Nǐn hǎo</div>
+			<div class='e text text-white'>Ciao</div>
+			<div class='f text text-white'>Yā</div>
+			<div class='g text text-white'>Hallo</div>
+			<div class='h text text-white'>Oi</div>
+			<div class='i text text-white'>Anyoung</div>
+			<div class='j text text-white'>مرحبا</div>
+			<div class='k text text-white'>Hello</div>
+		</div>
+	</section>
+
+	<section class="cd-section" id="lang">
+		<span class="blur"></span>
+		<div>
+			<h2>Section 2</h2>
+			<div class="btns btns--radio">
+				<span class="blur"></span><div>
+					<input type="radio" name="radioBtns1" id="radio1" value="ar" checked>
+					<label class="btns__btn" for="radio1">العربية</label>
+				</div>
+				
+				<span class="blur"></span><div>
+					<input type="radio" name="radioBtns1" id="radio2" value="fr">
+					<label class="btns__btn" for="radio2">français</label>
+				</div>
+
+				<span class="blur"></span><div>
+					<input type="radio" name="radioBtns1" id="radio3" value="en">
+					<label class="btns__btn" for="radio3">English</label>
+				</div>
+			</div>
+			<button class="ripple go btn-primary">GO</button>
+		</div>
+	</section>
+
+	<section class="cd-section" id="menu">
+		<ul class="cd-horizontal-nav">
+			<li><a href="#0" class="cd-prev cd-back">Back</a></li>
+		</ul>
+		<span class="blur"></span>
+		<div>
+			<div class="row" style="height: 100vh;">
+				<div class="col-8 ml-auto mr-auto">
+					<div class="row">
+						<div class="col-6 text-center">
+							<button class="btn btn-primary" id="menu0">MAP</button>
+						</div>
+						<div class="col-6 text-center">
+							<button class="btn btn-primary" id="menu1">HELP</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-8 ml-auto mr-auto">
+					<div class="row">
+						<div class="col-6 text-center">
+							<button class="btn btn-primary" id="menu2">CONTACT</button>
+						</div>
+						<div class="col-6 text-center">
+							<button class="btn btn-primary" id="menu3">MEDIA</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section" id="map">
+		<ul class="cd-horizontal-nav">
+			<li><a href="#0" class="cd-prev cd-back">Back</a></li>
+		</ul>
+		<span class="blur"></span>
+		<div>
+			<div class="row" style="height: 100vh;">
+				<div class="col-8 ml-auto mr-auto">
+					<div class="row">
+						<div class="col-6 text-center">
+							<button class="btn btn-primary" id="menu_map0">Map Mall</button>
+						</div>
+						<div class="col-6 text-center">
+							<button class="btn btn-primary" id="menu_map1">Store List</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section" id="map_store_list">
+		<ul class="cd-horizontal-nav">
+			<li><a href="#0" class="cd-prev cd-back">Back</a></li>
+		</ul>
+		<span class="blur"></span>
+		<div>
+			<div class="row" style="min-height: 100vh; overflow-y: scroll">
+				<div class="col-8 ml-auto mr-auto">
+					<div class="row" style="    top: calc(50vh - 168px); position: absolute;">
+						<div class="col-2 text-center">
+							<button class="btn btn-primary ripple">Fashion</button>
+						</div>
+						<div class="col-2 text-center">
+							<button class="btn btn-primary">Sports</button>
+						</div>
+						<div class="col-2 text-center">
+							<button class="btn btn-primary"></button>
+						</div>
+						<div class="col-2 text-center">
+							<button class="btn btn-primary"></button>
+						</div>
+						<div class="col-2 text-center">
+							<button class="btn btn-primary"></button>
+						</div>
+						<div class="col-2 text-center">
+							<button class="btn btn-primary"></button>
+						</div>
+						<div class="col-2 text-center">
+							<button class="btn btn-primary"></button>
+						</div>
+						<div class="col-2 text-center">
+							<button class="btn btn-primary"></button>
+						</div>
+						<div class="col-2 text-center">
+							<button class="btn btn-primary"></button>
+						</div>
+						<div class="col-2 text-center">
+							<button class="btn btn-primary"></button>
+						</div>
+						<div class="col-2 text-center">
+							<button class="btn btn-primary"></button>
+						</div>
+						<div class="col-2 text-center">
+							<button class="btn btn-primary"></button>
+						</div>
+						<div class="col-2 text-center">
+							<button class="btn btn-primary"></button>
+						</div>
+						<div class="col-2 text-center">
+							<button class="btn btn-primary"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section" id="map_store_list_by_rubric">
+		<ul class="cd-horizontal-nav">
+			<li><a href="#0" class="cd-prev cd-back">Back</a></li>
+		</ul>
+		<span class="blur"></span>
+		<div>
+			<div class="row" style="min-height: 100vh; overflow-y: scroll; width: 100%;">
+				<div class="col-8 ml-auto mr-auto">
+					<div class="row" style="    top: calc(50vh - 168px); position: absolute;">
+						<div class="col-2 text-center">
+							<button class="btn btn-primary ripple">Zara</button>
+						</div>
+						<div class="col-2 text-center">
+							<button class="btn btn-primary" style="background-color: blue">LCWAKIKI</button>
+						</div>
+						<div class="col-2 text-center">
+							<button class="btn btn-success">GUCCI</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section" id="help">
+		<ul class="cd-horizontal-nav">
+			<li><a href="#0" class="cd-prev cd-back">Back</a></li>
+		</ul>
+		<span class="blur"></span>
+		<div>
+			<div class="row" style="height: 100vh;">
+				<div class="col-8 ml-auto mr-auto">
+					<div class="row">
+						<div class="col-6 text-center">
+							<button class="btn btn-primary" id="menu_help0">Présentation</button>
+						</div>
+						<div class="col-6 text-center">
+							<button class="btn btn-primary" id="menu_help1">Assistance</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-8 ml-auto mr-auto">
+					<div class="row">
+						<div class="col-6 text-center">
+							<button class="btn btn-primary" id="menu_help2">Téléphones</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section" id="help_presentation">
+		<ul class="cd-horizontal-nav">
+			<li><a href="#0" class="cd-prev cd-back">Back</a></li>
+		</ul>
+		<span class="blur"></span>
+		<div>
+			<div class="row">
+				<div class="col-6" style="background-image: url(img/robot.front.jpg); background-repeat: no-repeat; background-size: contain; background-position: center; height: calc(100vh - 100px);; margin: 50px; margin-right: 0"></div>
+				<div class="col" style="padding-top: 50px; padding-bottom: 50px; padding-right: 50px;">
+					<h1 class="text-center text-danger">RoSe</h1>
+					<h1 class="text-center text-danger">RaFeeJ</h1>
+					<p style="text-align: justify; font-size: 18px;" class="text-white">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque quis risus semper tincidunt. Cras pellentesque sem quam, quis placerat erat maximus efficitur. Fusce nec lectus sed tortor aliquam vulputate sit amet ut augue. Quisque neque ipsum, fermentum venenatis nisl sed, finibus scelerisque elit. Curabitur pellentesque lacinia molestie. Nam gravida mauris vitae imperdiet tristique. Sed ultricies sit amet orci at mattis. Suspendisse vel libero consequat, ultrices justo at, facilisis dui. Mauris pulvinar efficitur placerat. Vivamus dapibus elit sit amet hendrerit rutrum. Nulla hendrerit convallis arcu, a fringilla lorem tempus ac. Nullam tempor dolor nec interdum accumsan. Proin viverra varius pellentesque.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section" id="help_assitance">
+		<ul class="cd-horizontal-nav">
+			<li><a href="#0" class="cd-prev cd-back">Back</a></li>
+		</ul>
+		<span class="blur"></span>
+		<div>
+			
+		</div>
+	</section>
+
+	<section class="cd-section" id="help_phones">
+		<ul class="cd-horizontal-nav">
+			<li><a href="#0" class="cd-prev cd-back">Back</a></li>
+		</ul>
+		<span class="blur"></span>
+		<div>
+			<div class="row" style="height: 100vh;">
+				<div class="col-12 text-center"><h3>A: 22 475 140</h3></div>
+				<div class="col-12 text-center"><h3>B: 20 512 065</h3></div>
+				<div class="col-12 text-center"><h3>C: 22 827 141</h3></div>
+				<div class="col-12 text-center"><h3>D: 50 255 689</h3></div>
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section" id="contact">
+		<ul class="cd-horizontal-nav">
+			<li><a href="#0" class="cd-prev cd-back">Back</a></li>
+		</ul>
+		<span class="blur"></span>
+		<div>
+			<div class="row" style="height: 100vh;">
+				<div class="col-8 ml-auto mr-auto text-center">
+					<h2 class="text-black" style="line-height: 50vh; padding-top: 50px;" id="menu_contact0">Company Contact</h2>
+					<h3 class="text-black text-center" id="menu_contact1">Tel</h3>
+					<h3 class="text-black text-center" id="menu_contact2">Address</h3>
+					<h3 class="text-black text-center" id="menu_contact3">Web</h3>
+					<h3 class="text-black text-center" id="menu_contact4">E-mail</h3>
+					<button class="btn btn-success" style="font-size: 32px;" data-toggle="modal" data-target=".bd-example-modal-xl" id="menu_contact5">Call us</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section" id="media">
+		<ul class="cd-horizontal-nav">
+			<li><a href="#0" class="cd-prev cd-back">Back</a></li>
+		</ul>
+		<span class="blur"></span><div>
+			<div class="row" style="height: 100vh;">
+				<div class="col-8 ml-auto mr-auto">
+					<div class="row">
+						<div class="col-6 text-center">
+							<button class="btn btn-primary" id="menu_media0">Story Kids</button>
+						</div>
+						<div class="col-6 text-center">
+							<button class="btn btn-primary" id="menu_media1">Music</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-8 ml-auto mr-auto">
+					<div class="row">
+						<div class="col-6 text-center">
+							<button class="btn btn-primary" id="menu_media2">Qatar</button>
+						</div>
+						<div class="col-6 text-center">
+							<button class="btn btn-primary" id="menu_media3">Next</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section" id="media_qatar">
+		<ul class="cd-horizontal-nav">
+			<li><a href="#0" class="cd-prev cd-back">Back</a></li>
+		</ul>
+		<span class="blur"></span><div>
+			<div class="row" style="height: 100vh;">
+				<div class="col-8 ml-auto mr-auto">
+					<div class="row">
+						<div class="col-6 text-center">
+							<button class="btn btn-danger" id="menu_media_qatar0">Tourism</button>
+						</div>
+						<div class="col-6 text-center">
+							<button class="btn btn-danger" id="menu_media_qatar1">World Cup</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-8 ml-auto mr-auto">
+					<div class="row">
+						<div class="col-6 text-center">
+							<button class="btn btn-danger" id="menu_media_qatar2">Innovation</button>
+						</div>
+						<div class="col-6 text-center">
+							<button class="btn btn-danger" id="menu_media_qatar3">Airways</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section" id="media_music">
+		<ul class="cd-horizontal-nav">
+			<li><a href="#0" class="cd-prev cd-back">Back</a></li>
+		</ul>
+		<span class="blur"></span><div>
+			
+		<div id="particles-js"></div>
+			<div class="row" style="height: 100vh;">
+				<div class="col-8 ml-auto mr-auto list-music" style="padding-top: 200px; max-height: calc(100vh - 200px); overflow-y: auto;">
+					<p class=""></p>
+					<audio controls style="width: 100%;">
+						<source src="music/kids-music.mp3" type="audio/mpeg" title="My Title">
+						Your browser does not support the audio element.
+					</audio>
+					<audio controls style="width: 100%;">
+						<source src="music/جديعندوضيعةصغيرة-Arabsong.mp3" type="audio/mpeg" title="My Title">
+						Your browser does not support the audio element.
+					</audio>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section" id="media_story">
+		<ul class="cd-horizontal-nav">
+			<li><a href="#0" class="cd-prev cd-back">Back</a></li>
+		</ul>
+		<div style="height: 100vh;">
+			<div class="bd-example">
+				<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" data-interval="0">
+				  <ol class="carousel-indicators" style="bottom: -29px;">
+					<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+					<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+				  </ol>
+				  <div class="carousel-inner">
+					<div class="carousel-item active">
+						<iframe height="100%" width="100%" src="https://www.youtube.com/embed/suXyfutxyPw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="carousel-item">
+						<iframe height="100%" width="100%" src="https://www.youtube.com/embed/xgAOLdEc1YQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>					</div>
+					<div class="carousel-item">
+						<iframe height="100%" width="100%" src="https://www.youtube.com/embed/o3NWwiweiPw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>					</div>
+				  </div>
+				  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev" style="left: -128px;">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				  </a>
+				  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next" style="right: -128px;">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				  </a>
+				</div>
+			  </div>
+		</div>
+	</section>
+
+	<section class="cd-section" id="media_qatar_tourism">
+		<ul class="cd-horizontal-nav">
+			<li><a href="#0" class="cd-prev cd-back" onclick="stopVideo()">Back</a></li>
+		</ul>
+		<span class="blur"></span><div>
+			<div class="row" style="height: 100vh;">
+				<div class="col-8 ml-auto mr-auto">
+					<div class="row">
+						<div class="col-6 text-center">
+							<button class="btn btn-danger" id="menu_media_qatar_tourism0">About Qatar</button>
+						</div>
+						<div class="col-6 text-center">
+							<button class="btn btn-danger" id="menu_media_qatar_tourism1">Places</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section" id="media_qatar_tourism_video">
+		<ul class="cd-horizontal-nav">
+			<li><a href="#0" class="cd-prev cd-back" onclick="stopVideo()">Back</a></li>
+		</ul>
+		<div style="background-color: black;">
+			<div class="row" style="height: 100vh; width: 100%">
+				<iframe src="https://player.vimeo.com/video/318464806?title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section" id="media_qatar_tourism_about">
+		<ul class="cd-horizontal-nav">
+			<li><a href="#0" class="cd-prev cd-back" onclick="stopVideo()">Back</a></li>
+		</ul>
+		<span class="blur"></span><div>
+			<div class="row">
+				<div class="col" style="padding: 0; margin: 0; height: 100vh;">
+					<img style="bottom: 0; height: 100%; position: absolute;" id="menu_media_qatar_tourism_about0" src="img/qatar/doha-corniche-02.jpg" alt="الممشى الشاطئي الشهير للدوحة" width="100%">
+					<div class="sub-title media_qatar_tourism_about_sub_title0 text-center">
+						متعة الثقافة والاستجمام في كتارا
+					</div>
+				</div>
+				<div class="col" style="padding: 0; margin: 0; height: 100vh;">
+					<img style="bottom: 0; height: 100%; position: absolute;" id="menu_media_qatar_tourism_about1" src="img/qatar/katara-01.jpg" alt="متعة الثقافة والاستجمام في كتارا" width="100%">
+					<div class="sub-title media_qatar_tourism_about_sub_title1 text-center">
+						الممشى الشاطئي الشهير للدوحة
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section" id="media_qatar_tourism_about_doha_corniche">
+		<ul class="cd-horizontal-nav">
+			<li><a href="#0" class="cd-prev cd-back" onclick="stopVideo()">Back</a></li>
+		</ul>
+		<div style="height: 100vh; background: rgba(218, 223, 225, 0.8);">
+			<div class="row">
+				<div class="col-12">
+					<img src="img/qatar/doha-corniche-02-detail.jpg" width="100%" />
+				</div>
+				<div class="col-12">
+					<p class="text-justify text-black" style="padding: 20px; font-size: 32px; direction:rtl;">
+						إنه كورنيش الدوحة الشهير الذي يعد متنزهاً ذي إطلالة بحرية يلتف حول خليج الدوحة بطول سبعة كيلومترات، ويتمتع بإطلالات خلابة على المدينة تشمل الأبراج الشاهقة ومركز أعمال المدينة والمجسمات البارزة لمتحف الفن الإسلامي. وتعكس قوارب السنبوك الشراعية الخشبية التقليدية المتجولة في مياه الخليج الصافية سحر ماضي المدينة وعبق تاريخها. ويتوافر بالكورنيش مساحة طبيعية للتنزه في قلب العاصمة، خالية من حركة المركبات، مزودة بالمقاهي والمطاعم ومرافق ممارسة الأنشطة المتنوعة في الهواء الطلق ومضمار جري.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section" id="media_qatar_tourism_about_katara">
+		<ul class="cd-horizontal-nav">
+			<li><a href="#0" class="cd-prev cd-back" onclick="stopVideo()">Back</a></li>
+		</ul>
+		<div style="height: 100vh; background: rgba(218, 223, 225, 0.8);">
+			<div class="row">
+				<div class="col-12">
+					<img src="img/qatar/katara-01-detail.jpg" width="100%" />
+				</div>
+				<div class="col-12">
+					<p class="text-justify text-black" style="padding: 20px; font-size: 32px; direction:rtl;">
+						يعكس الحي الثقافي كتارا إرث الفن المعماري في المنطقة، كما تحفل مسارحها الرائعة وقاعات العرض فيها بعروض الأداء المختلفة على مدار العام، لتشمل بذلك الحفلات الموسيقية والعروض والمعارض الفنية.
+						من أشهر هذه الفعاليات مهرجان أجيال السينمائي الذي تنظمه مؤسسة الدوحة للأفلام، والذي يقام في شهر نوفمبر من كل عام. وجدير بالذكر أن المعهد يقدم برنامجاً حافلاً بالعروض السينمائية في دور العرض المغلقة والمفتوحة طوال العام.					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	<section class="cd-section" id="media_qatar_world_cup">
+		<ul class="cd-horizontal-nav">
+			<li><a href="#0" class="cd-prev cd-back" onclick="stopVideo()">Back</a></li>
+		</ul>
+		<span class="blur"></span><div>
+			<div class="row" style="height: 100vh; width: 100%">
+				<div id="player_world_cup"></div>
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section" id="media_qatar_innovation">
+		<ul class="cd-horizontal-nav">
+			<li><a href="#0" class="cd-prev cd-back" onclick="stopVideo()">Back</a></li>
+		</ul>
+		<span class="blur"></span><div>
+			<div class="row" style="height: 100vh; width: 100%;">
+				<div id="player_innovation"></div>
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section" id="media_qatar_airways">
+		<ul class="cd-horizontal-nav">
+			<li><a href="#0" class="cd-prev cd-back" onclick="stopVideo()">Back</a></li>
+		</ul>
+		<span class="blur"></span><div>
+			<div class="row" style="height: 100vh; width: 100%;">
+				<div id="player_airways"></div>
+			</div>
+		</div>
+	</section>
+
+	
+	<!-- <nav>
+		<ul class="cd-vertical-nav">
+			<li><a href="#0" class="cd-prev inactive">Next</a></li>
+			<li><a href="#0" class="cd-next">Prev</a></li>
+		</ul>
+	</nav> -->
+
+	<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Call</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body" style="font-size: 48px;">Calling Running...</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-2.1.4.js"></script>
+	<script src="js/velocity.min.js"></script>
+	<script src="js/velocity.ui.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/animated.text.js"></script>
+	<script src="js/language.js"></script>
+	<script src="js/particles.js"></script>
+	<script>
+		var tag = document.createElement('script');
+
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		var player;
+		function onYouTubeIframeAPIReady() {
+			player = new YT.Player('player', {
+				height: '100%',
+				width: '100%',
+				videoId: 's-qNIgbR07g',
+				events: {
+					'onReady': onPlayerReady,
+					'onStateChange': onPlayerStateChange
+				}
+			});
+			player1 = new YT.Player('player_world_cup', {
+				height: '100%',
+				width: '100%',
+				videoId: 'NTznWgonbzg',
+				events: {
+					'onReady': onPlayerReady,
+					'onStateChange': onPlayerStateChange
+				}
+			});
+			player2 = new YT.Player('player_innovation', {
+				height: '100%',
+				width: '100%',
+				videoId: 'Emcg6tAqaIQ',
+				events: {
+					'onReady': onPlayerReady,
+					'onStateChange': onPlayerStateChange
+				}
+			});
+			player3 = new YT.Player('player_airways', {
+				height: '100%',
+				width: '100%',
+				videoId: 'YxrjOw0jnGg',
+				events: {
+					'onReady': onPlayerReady,
+					'onStateChange': onPlayerStateChange
+				}
+			});
+		}
+
+		function onPlayerReady(event) {
+			//event.target.playVideo();
+		}
+
+		var done = false;
+		function onPlayerStateChange(event) {
+			if (event.data == YT.PlayerState.PLAYING && !done) {
+			setTimeout(stopVideo, 6000);
+			done = true;
+			}
+		}
+		function stopVideo() {
+			player.stopVideo();
+			player1.stopVideo();
+			player2.stopVideo();
+			player3.stopVideo();
+		}
+	</script>
+	<script>
+		particlesJS("particles-js", {
+			"particles": {
+				"number": {
+				"value": 80,
+				"density": {
+					"enable": true,
+					"value_area": 800
+				}
+				},
+				"color": {
+				"value": "#ffffff"
+				},
+				"shape": {
+				"type": "circle",
+				"stroke": {
+					"width": 0,
+					"color": "#000000"
+				},
+				"polygon": {
+					"nb_sides": 5
+				},
+				"image": {
+					"src": "img/github.svg",
+					"width": 100,
+					"height": 100
+				}
+				},
+				"opacity": {
+				"value": 0.5,
+				"random": false,
+				"anim": {
+					"enable": false,
+					"speed": 1,
+					"opacity_min": 0.1,
+					"sync": false
+				}
+				},
+				"size": {
+				"value": 3,
+				"random": true,
+				"anim": {
+					"enable": false,
+					"speed": 40,
+					"size_min": 0.1,
+					"sync": false
+				}
+				},
+				"line_linked": {
+					"enable": true,
+					"distance": 150,
+					"color": "#ffffff",
+					"opacity": 0.4,
+					"width": 1
+				},
+				"move": {
+					"enable": true,
+					"speed": 2,
+					"direction": "none",
+					"random": false,
+					"straight": false,
+					"out_mode": "out",
+					"bounce": false,
+					"attract": {
+						"enable": false,
+						"rotateX": 600,
+						"rotateY": 1200
+					}
+				}
+			},
+			"interactivity": {
+				"detect_on": "canvas",
+				"events": {
+					"onhover": {
+						"enable": false,
+						"mode": "grab"
+					},
+					"onclick": {
+						"enable": false,
+						"mode": "push"
+					},
+					"resize": true
+				},
+				"modes": {
+					"grab": {
+						"distance": 140,
+						"line_linked": {
+						"opacity": 1
+						}
+				},
+				"bubble": {
+					"distance": 400,
+					"size": 40,
+					"duration": 2,
+					"opacity": 8,
+					"speed": 6
+				},
+				"repulse": {
+					"distance": 200,
+					"duration": 0.4
+				},
+				"push": {
+					"particles_nb": 4
+				},
+				"remove": {
+					"particles_nb": 2
+				}
+				}
+			},
+			"retina_detect": true
+		});
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
