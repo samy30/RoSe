@@ -1,7 +1,15 @@
-import Landing from "./landing";
-import Leasure from "./Leasure"
+import Landing from "./Landing";
+import Leisure from "./Leisure";
+import About from "./About";
+import Contacts from "./Contacts";
+import Help from "./Help";
+import Maps from "./Maps";
 
 export {
     Landing,
-    Leasure
+    Leisure,
+    About,
+    Contacts,
+    Help,
+    Maps
 }

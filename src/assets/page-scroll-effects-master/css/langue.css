@@ -1,0 +1,84 @@
+.btns {
+  display: inline-flex;
+  border-radius: 0.25em;
+  background-color: #ecf0f1;
+  position: absolute;
+  top: calc(50vh - 84px);
+  left: calc(50vw - 326px);
+  font-size: 44px;
+  padding: 50px;
+}
+.btns > * {
+  display: inline-block;
+  width: 197px;
+  text-align: center;
+}
+.btns > *:first-child, .btns *:first-child .btns__btn {
+  border-radius: 0.25em 0 0 0.25em;
+}
+.btns > *:last-child, .btns *:last-child .btns__btn {
+  
+}
+.btns--sm {
+  font-size: 24px;
+}
+.btns--md {
+  font-size: 28px;
+}
+.btns--lg {
+  font-size: 32px;
+}
+.btns__btn {
+  display: block;
+  position: relative;
+  padding: 20px 20px;
+  color: black;
+  margin: 0;
+  height: 100%;
+}
+.btns__btn:focus {
+  z-index: 1;
+}
+.btns__btn--selected, .btns--radio input[type="radio"]:checked + label, .btns--checkbox input[type="radio"]:checked + label, .btns--radio input[type="checkbox"]:checked + label, .btns--checkbox input[type="checkbox"]:checked + label {
+  background-color: #e67e22 !important;
+  color: #FFF;
+}
+.btns--radio > *, .btns--checkbox > * {
+  position: relative;
+}
+.btns--radio input[type="radio"], .btns--checkbox input[type="radio"], .btns--radio input[type="checkbox"], .btns--checkbox input[type="checkbox"] {
+ /* hide native buttons */
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+}
+.btns--radio input[type="radio"] + label, .btns--checkbox input[type="radio"] + label, .btns--radio input[type="checkbox"] + label, .btns--checkbox input[type="checkbox"] + label {
+  user-select: none;
+}
+.btns--radio input[type="radio"]:focus + label, .btns--checkbox input[type="radio"]:focus + label, .btns--radio input[type="checkbox"]:focus + label, .btns--checkbox input[type="checkbox"]:focus + label {
+  --color-shadow: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 3px var(--color-shadow);
+  z-index: 1;
+}
+.btns--radio input[type="radio"]:checked + label, .btns--checkbox input[type="radio"]:checked + label, .btns--radio input[type="checkbox"]:checked + label, .btns--checkbox input[type="checkbox"]:checked + label {
+ /* checked state */
+}
+.btns__btn--icon {
+  padding: 12px;
+}
+.btns__btn--icon .icon {
+  display: block;
+  color: inherit;
+}
+
+
+#select_lang{
+  font-size: 32px;
+  padding: 10px;
+}
