@@ -5,7 +5,7 @@ $(function(){
     var menu_contact = {ar: ['معلومات الشركة', 'هاتف', 'عنوان', 'موقع الكتروني', 'البريد الإلكتروني', 'اتصل بنا'], fr:['Contact de l\'entreprise', 'téléphone', 'Adresse', 'Site Web', 'E-mail', 'appelez nous'], en:['Company Contact', 'phone', 'Address', 'Website', 'E-mail', 'Call us']};
     var menu_media = {ar: ['قصص للأطفال', 'موسيقى', 'دولة قطر', 'التالى'], fr:['Histoire enfants', 'musique', 'Qatar', 'suivante'], en:['Story Kids', 'Music', 'Qatar', 'Next']};
     var menu_media_qatar = {ar: ['السياحة', 'كأس العالم 2022', 'الابتكار', 'الخطوط الجوية'], fr:['tourisme', 'Coupe du monde 2022', 'Innovation', 'Compagnies aériennes'], en:['tourism', 'World Cup 2022', 'Innovation', 'airways']};
-    var menu_media_qatar_tourism = {ar: ['لمحة عن قطر',   'مرحباً بك في قطر'], fr:['à propos du Qatar', 'endroits à visiter'], en:['About Qatar', 'Palces']};
+    var menu_media_qatar_tourism = {ar: ['لمحة عن قطر',   'مرحباً بك في قطر'], fr:['à propos du Qatar', 'endroits à visiter'], en:['AboutPages Qatar', 'Palces']};
 
     lang = 'fr';
 
