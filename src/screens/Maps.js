@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import {Link} from "react-router-dom";
 import imge1 from '../assets/images/map3.png'
 import imge2 from '../assets/images/list.jpg'
 
@@ -11,17 +10,17 @@ export default class Maps extends Component {
                     <div className="container text-center" style={{ height: "10px", marginTop: "70px" }}>
                         <div className="row">
                             <div className="col">
-                                <a href="" target="_blank">
-                                    <img src={imge1} alt="Image" className="img-raised"/>
+                                <a href="https://www.google.com">
+                                    <img src={imge1} alt="Background" className="img-raised"/>
                                 </a>
-                                <a href=""
+                                <a href="https://www.google.com"
                                    className="btn btn-outline-default btn-primary btn-round">Map of the Mall</a>
                             </div>
                             <div className="col">
-                                <a href="examples/profile-page.html" target="_blank">
-                                    <img src={imge2} alt="Image" className="img-raised"/>
+                                <a href="https://www.google.com">
+                                    <img src={imge2} alt="Background" className="img-raised"/>
                                 </a>
-                                <a href="examples/profile-page.html"
+                                <a href="https://www.google.com"
                                    className="btn btn-outline-default btn-primary btn-round">List of Stores</a>
                             </div>
                         </div>

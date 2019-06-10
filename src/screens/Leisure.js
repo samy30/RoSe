@@ -1,36 +1,135 @@
 import React, { Component } from "react";
-import {Link} from "react-router-dom";
-import imge1 from '../assets/images/corniche.jpg'
-import imge2 from '../assets/images/corniche.jpg'
-import imge3 from '../assets/images/corniche.jpg'
-import {Row , Col } from 'react-bootstrap'
-import "../assets/css/now-ui-kit.css"
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "video-react/dist/video-react.css";
+import img1 from '../assets/images/corniche.jpg';
+import {Col, Row} from "react-bootstrap";
+import vid1 from '../assets/videos/BabyShark.mp4'
+import vid2 from '../assets/videos/Qatar World Cup 2022 - Official Trailer [HD].mp4'
+import vid3 from '../assets/videos/Wheels on the Bus  CoCoMelon Nursery Rhymes  Kids Songs.mp4'
+import vid4 from '../assets/videos/Yes Yes Vegetables Song  CoCoMelon Nursery Rhymes  Kids Songs.mp4'
+import { Player, BigPlayButton } from 'video-react';
+import "react-image-gallery/styles/css/image-gallery.css";
+import ImageGallery from 'react-image-gallery';
 
 export default class Leisure extends Component {
-    render() {
+
+    _renderVideo(item) {
         return (
-            <div>
-                <div id="images">
-                    <h4>Images</h4>
-                    <div className="row">
-                        <div className="col-sm-2">
-                            <p className="category">Image</p>
-                            <img src={imge1} alt="Rounded Image" className="rounded"/>
+            <div className='image-gallery-image'>
+                <Player
+                    playsInline
+                    poster={img1}
+                    src={item.embedUrl}
+                >
+                    <BigPlayButton position="center" />
+                </Player>
+            </div>
+        )
+    }
+    render() {
+        const images = [
+            {
+                thumbnail: img1,
+                original: img1,
+                embedUrl: vid2,
+                description: 'Render custom slides within the gallery',
+                renderItem: this._renderVideo.bind(this)
+            },
+            {
+                thumbnail: img1,
+                original: img1,
+                embedUrl: vid2,
+                description: 'Render custom slides within the gallery',
+                renderItem: this._renderVideo.bind(this)
+            },
+            {
+                thumbnail: img1,
+                original: img1,
+                embedUrl: vid3,
+                description: 'Render custom slides within the gallery',
+                renderItem: this._renderVideo.bind(this)
+            },
+            {
+                thumbnail: img1,
+                original: img1,
+                embedUrl: vid4,
+                description: 'Render custom slides within the gallery',
+                renderItem: this._renderVideo.bind(this)
+            },
+            {
+                thumbnail: img1,
+                original: img1,
+                embedUrl: vid2,
+                description: 'Render custom slides within the gallery',
+                renderItem: this._renderVideo.bind(this)
+            },
+            {
+                thumbnail: img1,
+                original: img1,
+                embedUrl: vid1,
+                description: 'Render custom slides within the gallery',
+                renderItem: this._renderVideo.bind(this)
+            },
+        ];
+        return (
+            <div className={"section"}>
+                <div className={"container"}>
+            <Row>
+                <Col md={8}>
+                    <ImageGallery
+                        items={images}
+                        showPlayButton={false}
+                        showFullscreenButton={false}
+                    />
+                </Col>
+            </Row>
+                    <Row>
+                        <div>
+                            <h4>Games</h4>
+                            <div className="row">
+                                <div className="col-sm-3">
+                                    <p className="category">Raised</p>
+                                    <img src={img1} alt="Raised" className="rounded img-raised"/>
+                                </div>
+                                <div className="col-sm-3">
+                                    <p className="category">Raised</p>
+                                    <img src={img1} alt="Raised" className="rounded img-raised"/>
+                                </div>
+                                <div className="col-sm-3">
+                                    <p className="category">Raised</p>
+                                    <img src={img1} alt="Raised" className="rounded img-raised"/>
+                                </div>
+                                <div className="col-sm-3">
+                                    <p className="category">Raised</p>
+                                    <img src={img1} alt="Raised" className="rounded img-raised"/>
+                                </div>
+                                <div className="col-sm-3">
+                                    <p className="category">Raised</p>
+                                    <img src={img1} alt="Raised" className="rounded img-raised"/>
+                                </div>
+                                <div className="col-sm-3">
+                                    <p className="category">Raised</p>
+                                    <img src={img1} alt="Raised" className="rounded img-raised"/>
+                                </div>
+                                <div className="col-sm-3">
+                                    <p className="category">Raised</p>
+                                    <img src={img1} alt="Raised" className="rounded img-raised"/>
+                                </div>
+                                <div className="col-sm-3">
+                                    <p className="category">Raised</p>
+                                    <img src={img1} alt="Raised" className="rounded img-raised"/>
+                                </div>
+                                <div className="col-sm-3">
+                                    <p className="category">Raised</p>
+                                    <img src={img1} alt="Raised" className="rounded img-raised"/>
+                                </div>
+                                <div className="col-sm-3">
+                                    <p className="category">Raised</p>
+                                    <img src={img1} alt="Raised" className="rounded img-raised"/>
+                                </div>
+                            </div>
                         </div>
-                        <div className="col-sm-2">
-                            <p className="category">Circle Image</p>
-                            <img src={imge2} alt="Circle Image" className="rounded-circle"/>
-                        </div>
-                        <div className="col-sm-2">
-                            <p className="category">Raised</p>
-                            <img src={imge3} alt="Raised Image" className="rounded img-raised"/>
-                        </div>
-                        <div className="col-sm-2">
-                            <p className="category">Circle Raised</p>
-                            <img src={imge3} alt="Thumbnail Image"
-                                 className="rounded-circle img-raised"/>
-                        </div>
-                    </div>
+                    </Row>
                 </div>
             </div>
 

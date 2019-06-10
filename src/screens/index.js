@@ -4,6 +4,7 @@ import About from "./About";
 import Contacts from "./Contacts";
 import Help from "./Help";
 import Maps from "./Maps";
+import Welcome from "./Welcome"
 
 export {
     Landing,
@@ -11,5 +12,6 @@ export {
     About,
     Contacts,
     Help,
-    Maps
+    Maps,
+    Welcome,
 }

@@ -1,15 +1,13 @@
 import React, { Component } from "react";
-import {Link} from "react-router-dom";
 
-export default class Contacts extends Component {
+export default class Maps extends Component {
     render() {
         return (
-            <div>
-                <Link to={{pathname:"/", state: {fromPage: 2}}}>
-                <h1>ContactsPage</h1>
-                </Link>
+            <div style={{height: "100vh"}}>
+                <h1>test</h1>
             </div>
 
         );
     }
+
 }

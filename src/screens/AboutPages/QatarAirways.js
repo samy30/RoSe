@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import {Link} from "react-router-dom";
 import "../../assets/css/now-ui-kit.css"
 import BackgroundImage from "../../assets/images/qatarAirways2.jpg"
-import BackgroundImage2 from "../../assets/images/qatar/img22.jpg"
 import BackgroundImage3 from "../../assets/images/qatarAirways3.jpg"
 import BackgroundImage4 from "../../assets/images/qatarAirways4.jpg"
 
