@@ -5,11 +5,12 @@ export  class MovingWord extends Component {
 
     constructor(props, context) {
         super(props, context);
-        this.speed = 50;
+        this.speed = 10;
+        this.pas = 0.1;
 
         this.state={
             x: 0,
-            y: 0,
+            y: 85,
         }
     }
 
@@ -27,11 +28,11 @@ export  class MovingWord extends Component {
                 this.intervale0 = setInterval(()=>{
                     let x=this.state.x;
                     let y=this.state.y;
-                    x++;
-                    if(x==-1) x=0;
+                    x+=this.pas;
+                    if(x <=0) x=0;
                     if(x>=85) x=85;
-                    y++;
-                    if(y==-1) y=0;
+                    y += this.pas;
+                    if(y<=0) y=0;
                     if(y>=85) y=85;
                     this.setState({
                         x:x,
@@ -51,11 +52,11 @@ export  class MovingWord extends Component {
                 this.intervale1 = setInterval(()=>{
                     let x=this.state.x;
                     let y=this.state.y;
-                    x++;
-                    if(x==-1) x=0;
+                    x+= this.pas;
+                    if(x<=0) x=0;
                     if(x>=85) x=85;
-                    y--;
-                    if(y==-1) y=0;
+                    y-= this.pas;
+                    if(y<=0) y=0;
                     if(y>=85) y=85;
                     this.setState({
                         x:x,
@@ -75,11 +76,11 @@ export  class MovingWord extends Component {
                 this.intervale2 = setInterval(()=>{
                     let x=this.state.x;
                     let y=this.state.y;
-                    x--;
-                    if(x==-1) x=0;
+                    x-= this.pas;
+                    if(x<=0) x=0;
                     if(x>=85) x=85;
-                    y++;
-                    if(y==-1) y=0;
+                    y += this.pas;
+                    if(y<=0) y=0;
                     if(y>=85) y=85;
                     this.setState({
                         x:x,
@@ -99,11 +100,11 @@ export  class MovingWord extends Component {
                 this.intervale3 = setInterval(()=>{
                     let x=this.state.x;
                     let y=this.state.y;
-                    x--;
-                    if(x==-1) x=0;
+                    x-= this.pas;
+                    if(x<=0) x=0;
                     if(x>=85) x=85;
-                    y--;
-                    if(y==-1) y=0;
+                    y-= this.pas;
+                    if(y<=0) y=0;
                     if(y>=85) y=85;
                     this.setState({
                         x:x,
@@ -123,11 +124,11 @@ export  class MovingWord extends Component {
                 this.intervale4 = setInterval(()=>{
                     let x=this.state.x;
                     let y=this.state.y;
-                    x=x;
-                    if(x==-1) x=0;
+                    //x=x;
+                    if(x<=0) x=0;
                     if(x>=85) x=85;
-                    y++;
-                    if(y==-1) y=0;
+                    y += this.pas;
+                    if(y<=0) y=0;
                     if(y>=85) y=85;
                     this.setState({
                         x:x,
@@ -147,11 +148,11 @@ export  class MovingWord extends Component {
                 this.intervale5 = setInterval(()=>{
                     let x=this.state.x;
                     let y=this.state.y;
-                    x=x;
-                    if(x==-1) x=0;
+                    //x=x;
+                    if(x<=0) x=0;
                     if(x>=85) x=85;
-                    y--;
-                    if(y==-1) y=0;
+                    y-= this.pas;
+                    if(y<=0) y=0;
                     if(y>=85) y=85;
                     this.setState({
                         x:x,
@@ -171,11 +172,11 @@ export  class MovingWord extends Component {
                 this.intervale6 = setInterval(()=>{
                     let x=this.state.x;
                     let y=this.state.y;
-                    x++;
-                    if(x==-1) x=0;
+                    x+= this.pas;
+                    if(x<=0) x=0;
                     if(x>=85) x=85;
-                    y=y;
-                    if(y==-1) y=0;
+                    //y=y;
+                    if(y<=0) y=0;
                     if(y>=85) y=85;
                     this.setState({
                         x:x,
@@ -195,11 +196,11 @@ export  class MovingWord extends Component {
                 this.intervale7 = setInterval(()=>{
                     let x=this.state.x;
                     let y=this.state.y;
-                    x--;
-                    if(x==-1) x=0;
+                    x-= this.pas;
+                    if(x<=0) x=0;
                     if(x>=85) x=85;
-                    y=y;
-                    if(y==-1) y=0;
+                    //y=y;
+                    if(y<=0) y=0;
                     if(y>=85) y=85;
                     this.setState({
                         x:x,
@@ -218,14 +219,25 @@ export  class MovingWord extends Component {
         this.firstIntervale = setInterval(()=>{
             let sens =Math.floor(Math.random() * 8);
             this.animateWord(sens);
-        },42*this.speed)
+        },800*this.speed)
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.intervale0);
+        clearInterval(this.intervale1);
+        clearInterval(this.intervale2);
+        clearInterval(this.intervale3);
+        clearInterval(this.intervale4);
+        clearInterval(this.intervale5);
+        clearInterval(this.intervale6);
+        clearInterval(this.intervale7);
+        clearInterval(this.firstIntervale)
     }
 
     render() {
         let {title,color} = this.props ;
         if(title === undefined) title="hello" ;
         if(color === undefined) color="white" ;
-        console.log(title);
         return (
             <div>
                 <h2 style={{position: "absolute", left: this.state.x+'%', top: this.state.y+'%', color: color}}>{title}</h2>

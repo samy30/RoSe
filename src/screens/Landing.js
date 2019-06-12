@@ -14,6 +14,7 @@ import Background4 from "../assets/images/qatar/img5.jpg"
 import Background5 from "../assets/images/qatar/img6.jpg"
 import {Link} from "react-router-dom";
 import ReactTouchEvents from "react-touch-events";
+import BackgroundImage from "../assets/images/logo.png";
 
 let slides = [
   {
@@ -85,10 +86,10 @@ export default class Landing extends Component {
 
     switch (direction) {
       case "top":
-        alert("top");
+        console.log("top");
         break;
       case "bottom":
-        alert("bottom");
+        console.log("bottom");
         break;
       case "left":
         this.scrollToLeft();
@@ -120,7 +121,8 @@ export default class Landing extends Component {
         <ReactTouchEvents
             onSwipe={ this.handleSwipe.bind(this) }
         >
-      <div className={"App " + (fade ? 'fade-in2' : 'fade-in')} style={{ paddingTop: "5%", backgroundImage: "url(" + this.state.BackgroundImage + ")"}} >
+      <div className={"App " + (fade ? 'fade-in2' : 'fade-in')} style={{ paddingTop: "5%"}} >
+        <span className="blur" style={{backgroundImage: "url(" + this.state.BackgroundImage + ")"}}></span>
         <div style={{ width: "80%", height: "400px", margin: "0 auto" }} onScroll={this.testing}>
 
         <Carousel
